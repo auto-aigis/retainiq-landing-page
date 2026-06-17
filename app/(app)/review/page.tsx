@@ -197,30 +197,35 @@ function ReviewContent() {
               <div className="flex items-center justify-center gap-2">
                 <span className="text-xs text-gray-500">
                   {currentCard.topic_tag && `Topic: ${currentCard.topic_tag}`}
+{flipped && (
+              <div className="flex items-center justify-center gap-2">
+                <span className="text-xs text-gray-500">
+                  {currentCard.topic_tag && `Topic: ${currentCard.topic_tag}`}
                 </span>
               </div>
             )}
           </div>
-{!flipped ? (
-          <div className="p-4 border-t">
-            <Button onClick={() => setFlipped(true)} className="w-full">
-              Show Answer
-            </Button>
-          </div>
-        ) : (
-          <div className="p-4 border-t grid grid-cols-4 gap-2">
-            {ratingConfig.map(({ rating, label, color, icon: Icon }) => (
-              <Button
-                key={rating}
-                onClick={() => handleRate(rating)}
-                className={`${color} text-white`}
-              >
-                <Icon className="h-4 w-4 mr-1" />
-                {label}
+          {!flipped ? (
+            <div className="p-4 border-t">
+              <Button onClick={() => setFlipped(true)} className="w-full">
+                Show Answer
               </Button>
-            ))}
-          </div>
-        )}
+            </div>
+          ) : (
+            <div className="p-4 border-t grid grid-cols-4 gap-2">
+              {ratingConfig.map(({ rating, label, color, icon: Icon }) => (
+                <Button
+                  key={rating}
+                  onClick={() => handleRate(rating)}
+                  className={`${color} text-white`}
+                >
+                  <Icon className="h-4 w-4 mr-1" />
+                  {label}
+                </Button>
+              ))}
+            </div>
+          )}
+        </CardContent>
       </Card>
     </div>
   );
