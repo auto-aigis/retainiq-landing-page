@@ -187,17 +187,13 @@ function ReviewContent() {
         </div>
       </div>
 
-      <Card className="min-h-[300px] flex flex-col">
+<Card className="min-h-[300px] flex flex-col">
         <CardContent className="flex-1 flex flex-col items-center justify-center p-8">
           <div className="text-center space-y-4 w-full">
             <p className="text-lg text-gray-900 font-medium">
               {flipped ? currentCard.back : currentCard.front}
             </p>
             {flipped && (
-              <div className="flex items-center justify-center gap-2">
-                <span className="text-xs text-gray-500">
-                  {currentCard.topic_tag && `Topic: ${currentCard.topic_tag}`}
-{flipped && (
               <div className="flex items-center justify-center gap-2">
                 <span className="text-xs text-gray-500">
                   {currentCard.topic_tag && `Topic: ${currentCard.topic_tag}`}
