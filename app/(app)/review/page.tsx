@@ -141,8 +141,7 @@ function ReviewContent() {
               <Link href="/dashboard" className="flex-1">
                 <Button className="w-full">Back to Dashboard</Button>
               </Link>
-              <Button variant="outline" onClick={() => router.reload()} className="flex-1">
-                Review More
+<Button variant="outline" onClick={() => window.location.reload()} className="flex-1">
               </Button>
             </div>
           </CardContent>
