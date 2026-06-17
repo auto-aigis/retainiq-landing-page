@@ -292,9 +292,8 @@ export default function UploadPage() {
             <h2 className="text-lg font-semibold text-gray-900">
               Preview Cards ({selectedCards.size} selected)
             </h2>
-            <Button onClick={handleSaveDeck} disabled={status === 'saving'}>
-              {status === 'saving' ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}
-              Save Deck
+<Button onClick={handleSaveDeck} disabled={(status as UploadStatus) === 'saving'}>
+              {(status as UploadStatus) === 'saving' ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}
             </Button>
           </div>
 
